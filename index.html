@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Tarjetas</title>
+</head>
+<body >
+	<center><h1> Crea tu tarjeta de Felicitación	</h1></center>
+	<form name=opciones style="margin-left: 450px" > 
+		<h2>Elige un tema.</h2>
+<input type="Radio" name="opci" id="uno" value="uno"> San Valentin 
+<input type="Radio" name="opci" id="dos" value="dos"> Feliz Cumpleaños 
+<input type="Radio" name="opci" id="tres" value="tres"> Motivación 
+</form>
+<form name=imagen style="margin-left: 450px" > 
+		<h2>Elige una imagen.</h2>
+		<br><br>
+		<img src="img/valen.jpg" width="20%" height="30%">
+		<img src="img/cumple.jpg" width="20%" height="30%">
+		<img src="img/motiva.jpg" width="20%" height="30%"><br><br>
+		<label style="margin-left: 40px;"   >
+<input type="Radio" name="imagenes" value="image1"   id="image1"> San Valentin </label>
+<label style="margin-left: 50px;">
+<input type="Radio" name="imagenes" value="image2"  id="image2"> Feliz Cumpleaños </label>
+<label style="margin-left: 50px;">
+<input type="Radio" name="imagenes" value="image3"  id="image3"> Motivación 
+</label>
+</form>
+<form name=texto style="margin-left: 450px" > 
+		<h2>Título</h2>		
+		<textarea placeholder="Capture el cuerpo del mensaje." name="Area" id="aria" rows="11" cols="50" style="float: right;margin-right: 300px;"></textarea>
+<input type="text" name="Titulo"  placeholder="Capture un Título" id="tit"> <br><br><br><br>
+<input type="text" name="Subtitulo"  placeholder="Capture un Subtítulo" id="sub"> <br> <br><br><br>
+<input type="text" name="Nombre" placeholder="Capture el nombre de la persona" id="per">
+</form>
+<hr>
+<form name=texto style="margin-left: 450px" > 
+
+<input type="color" name="color" id="cambio" style="margin-left: 50px;">
+		<button type="button" onclick="Generador();" style="float: right;margin-right: 500px;height: 50px;width: 150px;margin-bottom: 50px;">Generar</button>
+
+
+</form>
+<p id="fondo1"></p>
+<script type="text/javascript">
+	function Generador(){
+		var T,S,A,P,F,Au,D;
+		
+		T=document.getElementById("tit").value;
+		S=document.getElementById("sub").value;
+		A=document.getElementById("aria").value;
+		P=document.getElementById("per").value;
+		F=document.getElementById("cambio").value;
+		Au=prompt("dale en aceptar")
+		D=new Date();
+
+		if(document.getElementById("uno").checked == true){
+			
+			if(document.getElementById("image1").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/valen.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/cumple.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/motiva.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+	else if(document.getElementById("dos").checked == true){
+			if(document.getElementById("image1").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/valen.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/cumple.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/motiva.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+
+	}
+	else if(document.getElementById("tres").checked == true){
+			if(document.getElementById("image1").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/valen.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+	else if(document.getElementById("image2").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/cumple.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+else if(document.getElementById("image3").checked == true){
+		document.write('<article>'+'<audio src="dbd.mp3"  autoplay="" loop >'+'</audio>'+'<center>'+'<font face="Courier New"; size=18; color="white">'+T+'</font>'+'<br>'+'<br>'+'<font face="Courier New"; size=8; color="white">'+S+'</font>'+'<br>'+'<br>'+'<img src="img/motiva.jpg" width="70%" height="60%">'+'<br>'+'<br>'+'<font face="Courier New"; size=4; color="white">'+'<section style="float:center">'+A+'</section>'+'<br>'+'<br>'+"Para:"+P+"."+'<br>'+'<br>'+'<h3 style="float:right">'+Au+'</h3>'+'<h3 style="float:left">'+D+'</h3>'+'</font>'+'</center'+'</article>');
+		document.body.style.backgroundColor = F;
+}
+	}
+	 }
+</script>
+
+</style>
+</body>
+</html>
